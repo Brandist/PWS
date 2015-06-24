@@ -1,0 +1,22 @@
+package pws_bestel;
+
+import java.awt.*;
+
+public class PWS_Bestel_Vars {
+	public static Button Cola;
+	public static Button Chips;
+	public static Button Cake;
+	public static Button Vlees;
+	
+	public static TextField Aantalco;
+	public static TextField Aantalch;
+	public static TextField Aantalca;
+	public static TextField Aantalvl;
+	
+	public static int co;
+	public static int ch;
+	public static int ca;
+	public static int vl;
+	
+	
+}
