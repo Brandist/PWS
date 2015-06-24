@@ -1,0 +1,56 @@
+package pws_bestel;
+
+import java.applet.Applet;
+import java.awt.*;
+import java.awt.event.*;
+
+public class PWS_Bestel_main extends Applet implements ActionListener{
+
+	public void init(){
+		PWS_Bestel_Vars.Cola = new Button("Cola");
+		PWS_Bestel_Vars.Chips = new Button("Chips");
+		PWS_Bestel_Vars.Cake = new Button("Cake");
+		PWS_Bestel_Vars.Vlees = new Button("Vlees");
+		PWS_Bestel_Vars.Cola.addActionListener(this);
+		PWS_Bestel_Vars.Chips.addActionListener(this);
+		PWS_Bestel_Vars.Cake.addActionListener(this);
+		PWS_Bestel_Vars.Vlees.addActionListener(this);
+		add(PWS_Bestel_Vars.Cola);
+		add(PWS_Bestel_Vars.Chips);
+		add(PWS_Bestel_Vars.Cake);
+		add(PWS_Bestel_Vars.Vlees);
+		PWS_Bestel_Vars.Aantalca = new TextField("");
+		PWS_Bestel_Vars.Aantalch = new TextField("");
+		PWS_Bestel_Vars.Aantalco = new TextField("");
+		PWS_Bestel_Vars.Aantalvl = new TextField("");
+		add(PWS_Bestel_Vars.Aantalco);
+		add(PWS_Bestel_Vars.Aantalch);
+		add(PWS_Bestel_Vars.Aantalca);
+		add(PWS_Bestel_Vars.Aantalvl);
+	}
+	
+	public void Paint(){
+		
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == PWS_Bestel_Vars.Cola){
+			PWS_Bestel_Vars.co++;
+			PWS_Bestel_Vars.Aantalco.setText("" + PWS_Bestel_Vars.co);
+		}
+		if(e.getSource() == PWS_Bestel_Vars.Chips){
+			PWS_Bestel_Vars.ch++;
+			PWS_Bestel_Vars.Aantalch.setText("" + PWS_Bestel_Vars.ch);
+		}
+		if(e.getSource() == PWS_Bestel_Vars.Cake){
+			PWS_Bestel_Vars.ca++;
+			PWS_Bestel_Vars.Aantalca.setText("" + PWS_Bestel_Vars.ca);
+		}
+		if(e.getSource() == PWS_Bestel_Vars.Vlees){
+			PWS_Bestel_Vars.vl++;
+			PWS_Bestel_Vars.Aantalvl.setText("" + PWS_Bestel_Vars.vl);
+		}
+	}
+
+}
